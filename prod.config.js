@@ -11,6 +11,7 @@ module.exports={
   output:{
     path:path.resolve(__dirname,'dist'),
     filename:'[name].[contenthash].js',
+    assetModuleFilename: 'images/[name].[contenthash].[ext]'
   },
   optimization:{
     minimizer:[new CssMinimizerPlugin(),new TerserPlugin()],
@@ -27,6 +28,10 @@ module.exports={
   ],
   module: {
     rules: [
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,

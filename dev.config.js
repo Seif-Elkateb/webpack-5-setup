@@ -8,6 +8,8 @@ module.exports={
   output:{
     path:path.resolve(__dirname,'dist'),
     filename:'[name].js',
+    assetModuleFilename: 'images/[name].[ext]'
+
   },
   plugins:[new HtmlWebpackPlugin({
     template:'./src/client/views/index.html',
@@ -17,6 +19,10 @@ module.exports={
 ],
 module: {
   rules: [
+    {
+      test: /\.html$/i,
+      loader: "html-loader",
+    },
     {
       test: /\.m?js$/,
       exclude: /(node_modules|bower_components)/,
