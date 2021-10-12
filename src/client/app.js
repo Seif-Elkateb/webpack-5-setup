@@ -9,3 +9,12 @@ multiply(3,5);
 divide(4,5);
 subtract(4,5);
 createAlert('job finished');
+let person = {
+  profile: {
+    name: "",
+    age: 0
+  }
+};
+
+console.log(person.profile.name ?? "Anonymous"); // ""
+console.log(person.profile.age ?? 18); // 0
