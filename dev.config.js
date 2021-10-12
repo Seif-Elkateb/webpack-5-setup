@@ -27,6 +27,10 @@ module: {
           plugins: ['@babel/plugin-proposal-object-rest-spread']
         }
       }
+    },
+    {
+      test: /\.scss$/,
+      use:["style-loader","css-loader","sass-loader"]
     }
   ]
 }
