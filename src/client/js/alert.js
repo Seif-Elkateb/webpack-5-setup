@@ -1,3 +1,3 @@
 export const createAlert=(message)=>{
-  console.log('message');
+  console.log(message);
 }

@@ -2,6 +2,9 @@ const path= require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+
 module.exports={
   entry:'./src/client/app.js',
   mode:'production',
@@ -9,6 +12,9 @@ module.exports={
     path:path.resolve(__dirname,'dist'),
     filename:'[name].[contenthash].js',
   },
+  optimization:{
+    minimizer:[new CssMinimizerPlugin(),new TerserPlugin()],
+ },
   plugins:[
     new HtmlWebpackPlugin({
       template:'./src/client/views/index.html',
