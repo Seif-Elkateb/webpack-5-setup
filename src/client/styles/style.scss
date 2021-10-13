@@ -1,1 +1,69 @@
-@import './body.scss'
+@import './body.scss';
+img{
+  position: absolute;
+  opacity: .9;
+  right:30px;
+  top:20%;
+}
+@media   (max-width: 1000px) {
+  img{
+    display: none;
+  }
+}
+h1{
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+  color:#333;
+  font-family:monospace;
+}
+input{
+  height: 30px;
+  background-color: rgb(231, 176, 131);
+  font-size: 30px;
+  text-align: center;
+  color:#333;
+  width: 200px;
+  border-radius: 10px;
+  border:3px solid #555;
+  display: inline-block;
+  margin:auto;
+}
+.inputs{
+  width:fit-content;
+  margin:auto;
+}
+button{
+  padding:10px;
+  font-size:20px;
+  font-family:monospace;
+  color:#444;
+  background-color: rgba(243, 97, 53, 0.418);
+  border:3px solid rgba(68, 68, 68, 0.801);
+  border-radius: 20px;
+}
+button:hover{
+  padding:12px;
+  background-color: rgba(218, 221, 48, 0.418);
+
+}
+button:active{
+  border-bottom:5px solid rgba(68, 68, 68, 0.801);
+  border-top:1px solid rgba(68, 68, 68, 0.801);
+
+}
+.btns{
+  width:fit-content;
+  margin:auto;
+  margin-top:50px;
+}
+.answer{
+  
+  font-size:30px;
+  font-family:monospace;
+  color:#333;
+  width: fit-content;
+  margin:auto;
+  margin-top:30px;
+
+}

@@ -1,3 +1,3 @@
 export const subtract=(a,b)=>{
-  console.log(a-b);
+  return a-b;
 }
